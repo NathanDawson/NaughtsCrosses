@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.EventQueue;
 
@@ -32,5 +33,109 @@ public class NaughtCross {
                 }
             }
         });
+    }
+
+    public NaughtCross(){
+            // initialize();
+        }
+        
+    private void winningGame(){
+
+        // For Player X to win
+        if (b1 == 1 && b2 == 1 && b3 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b4 == 1 && b5 == 1 && b6 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b7 == 1 && b8 == 1 && b9 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b1 == 1 && b4 == 1 && b7 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b2 == 1 && b5 == 1 && b8 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b3 == 1 && b6 == 1 && b9 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b1 == 1 && b5 == 1 && b9 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+        else if (b3 == 1 && b5 == 1 && b7 == 1){
+            JOptionPane.showMessageDialog(frame, "Player X Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(xCount1));
+        }
+
+        // For Player O to win
+        else if (b1 == 0 && b2 == 0 && b3 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b4 == 0 && b5 == 0 && b6 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b7 == 0 && b8 == 0 && b9 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b1 == 0 && b4 == 0 && b7 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b2 == 0 && b5 == 0 && b8 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b3 == 0 && b6 == 0 && b9 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b1 == 0 && b5 == 0 && b9 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            oCount1++;
+            oCount.setText(String.valueOf(oCount1));
+        }
+        else if (b3 == 0 && b5 == 0 && b7 == 0){
+            JOptionPane.showMessageDialog(frame, "Player O Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+            xCount1++;
+            xCount.setText(String.valueOf(oCount1));
+        }
+
+        // No Players Win
+        else if (i == 9){
+            JOptionPane.showMessageDialog(frame, "No One Wins", "Naughts & Crosses", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+    private void choosePlayer(){
+        if(startGame.equalsIgnoreCase("X")){
+            startGame = "O";
+        } else {
+            startGame = "X";
+        }
+
     }
 }
