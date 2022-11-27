@@ -184,6 +184,7 @@ public class NaughtCross {
                 winningGame();
             }
         });
+
         btn1.setFont(new Font("Tahoma", Font.BOLD, 80));
         panel_1.add(btn1, BorderLayout.CENTER);
 
@@ -209,6 +210,7 @@ public class NaughtCross {
                 winningGame();
             }
         });
+
         btn2.setFont(new Font("Tahoma", Font.BOLD, 80));
         panel_2.add(btn2, BorderLayout.CENTER);
 
@@ -234,6 +236,7 @@ public class NaughtCross {
                 winningGame();
             }
         });
+
         btn3.setFont(new Font("Tahoma", Font.BOLD, 80));
         panel_3.add(btn3, BorderLayout.CENTER);
 
@@ -306,6 +309,7 @@ public class NaughtCross {
                 winningGame();
             }
         });
+
         btn5.setFont(new Font("Tahoma", Font.BOLD, 80));
         panel_8.add(btn5, BorderLayout.CENTER);
 
@@ -331,6 +335,7 @@ public class NaughtCross {
                 winningGame();
             }
         });
+
         btn6.setFont(new Font("Tahoma", Font.BOLD, 80));
         panel_6.add(btn6, BorderLayout.CENTER);
 
@@ -365,14 +370,11 @@ public class NaughtCross {
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btn7.setText(startGame);
-				if(startGame.equalsIgnoreCase("X"))
-				{
+				if(startGame.equalsIgnoreCase("X")){
 					btn7.setForeground(Color.RED);
 					b7=1;
 					i++;
-				}
-				else 
-				{
+				} else {
 					btn7.setForeground(Color.BLUE);
 					b7=0;
 					i++;
@@ -381,6 +383,7 @@ public class NaughtCross {
 				winningGame();
 			}
 		});
+
 		btn7.setFont(new Font("Tahoma", Font.BOLD, 80));
 		panel_11.add(btn7, BorderLayout.CENTER);
 		
@@ -393,14 +396,11 @@ public class NaughtCross {
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btn8.setText(startGame);
-				if(startGame.equalsIgnoreCase("X"))
-				{
+				if(startGame.equalsIgnoreCase("X")){
 					btn8.setForeground(Color.RED);
 					b8=1;
 					i++;
-				}
-				else 
-				{
+				} else {
 					btn8.setForeground(Color.BLUE);
 					b8=0;
 					i++;
@@ -409,6 +409,7 @@ public class NaughtCross {
 				winningGame();
 			}
 		});
+
 		btn8.setFont(new Font("Tahoma", Font.BOLD, 80));
 		panel_12.add(btn8, BorderLayout.CENTER);
 		
@@ -421,14 +422,11 @@ public class NaughtCross {
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				btn9.setText(startGame);
-				if(startGame.equalsIgnoreCase("X"))
-				{
+				if(startGame.equalsIgnoreCase("X")){
 					btn9.setForeground(Color.RED);
 					b9=1;
 					i++;
-				}
-				else 
-				{
+				} else {
 					btn9.setForeground(Color.BLUE);
 					b9=0;
 					i++;
@@ -437,6 +435,7 @@ public class NaughtCross {
 				winningGame();
 			}
 		});
+
 		btn9.setFont(new Font("Tahoma", Font.BOLD, 80));
 		panel_13.add(btn9, BorderLayout.CENTER);
 		
@@ -457,18 +456,19 @@ public class NaughtCross {
                 btn7.setText(null);
                 btn8.setText(null);
                 btn9.setText(null);
-                 int b1 = 10;
-                 int b2 = 10;
-                 int b3 = 10;
-                 int b4 = 10;
-                 int b5 = 10;
-                 int b6 = 10;
-                 int b7 = 10;
-                 int b8 = 10;
-                 int b9 = 10;
-                 int i = 0;
+                b1 = 10;
+                b2 = 10;
+                b3 = 10;
+                b4 = 10;
+                b5 = 10;
+                b6 = 10;
+                b7 = 10;
+                b8 = 10;
+                b9 = 10;
+                i = 0;
             }
         });
+
         btnReset.setFont(new Font("Tahoma", Font.BOLD, 22));
 		panel_14.add(btnReset, BorderLayout.CENTER);
 
@@ -482,14 +482,12 @@ public class NaughtCross {
 			public void actionPerformed(ActionEvent arg0) {
 
 				frame = new JFrame("Exit");
-				if(JOptionPane.showConfirmDialog(frame, "Confirm You Want To Exit","Noughts & Crosses",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION)
-				{
+				if(JOptionPane.showConfirmDialog(frame, "Confirm You Want To Exit","Noughts & Crosses",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION){
 					System.exit(0);
-					
 				}
-				
 			}
 		});
+
         btnExit.setFont(new Font("Tahoma", Font.BOLD, 22));
 		panel_15.add(btnExit, BorderLayout.CENTER);
     }
