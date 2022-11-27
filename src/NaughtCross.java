@@ -36,9 +36,9 @@ public class NaughtCross {
     }
 
     public NaughtCross(){
-            // initialize();
+        initialize();
         }
-        
+
     private void winningGame(){
 
         // For Player X to win
@@ -136,6 +136,12 @@ public class NaughtCross {
         } else {
             startGame = "X";
         }
+    }
 
+    private void initialize() {
+        frame = new JFrame();
+        frame.setBounds(100, 100, 600, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(new java.awt.BorderLayout(0, 0));
     }
 }
