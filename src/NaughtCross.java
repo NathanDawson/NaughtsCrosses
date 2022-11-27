@@ -1,7 +1,18 @@
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.EventQueue;
+
+import java.awt.*;
+import java.awt.event.*;
 
 public class NaughtCross {
     
@@ -143,5 +154,86 @@ public class NaughtCross {
         frame.setBounds(100, 100, 600, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(new java.awt.BorderLayout(0, 0));
+
+        JPanel panel = new JPanel();
+        panel.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+        frame.getContentPane().add(panel, BorderLayout.CENTER);
+        panel.setLayout(new GridLayout(3, 5, 2, 2));
+
+        JPanel panel_1 = new JPanel();
+        panel_1.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+        panel.add(panel_1);
+        panel_1.setLayout(new BorderLayout(0, 0));
+
+        JButton btn1 = new JButton("");
+        btn1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0){
+                btn1.setText(startGame);
+                if(startGame.equalsIgnoreCase("X")){
+                    btn1.setForeground(Color.RED);
+                    b1 = 1;
+                    i++;
+                } else {
+                    btn1.setForeground(Color.BLUE);
+                    b1 = 0;
+                    i++;
+                }
+                choosePlayer();
+                winningGame();
+            }
+        });
+        btn1.setFont(new Font("Tahoma", Font.BOLD, 80));
+        panel_1.add(btn1, BorderLayout.CENTER);
+
+        JPanel panel_2 = new JPanel();
+        panel_2.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+        panel.add(panel_2);
+        panel_2.setLayout(new BorderLayout(0, 0));
+
+        JButton btn2 = new JButton("");
+        btn2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0){
+                btn2.setText(startGame);
+                if(startGame.equalsIgnoreCase("X")){
+                    btn2.setForeground(Color.RED);
+                    b2 = 1;
+                    i++;
+                } else {
+                    btn2.setForeground(Color.BLUE);
+                    b2 = 0;
+                    i++;
+                }
+                choosePlayer();
+                winningGame();
+            }
+        });
+        btn2.setFont(new Font("Tahoma", Font.BOLD, 80));
+        panel_2.add(btn2, BorderLayout.CENTER);
+
+        JPanel panel_3 = new JPanel();
+        panel_3.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+        panel.add(panel_3);
+        panel_3.setLayout(new BorderLayout(0, 0));
+
+        JButton btn3 = new JButton("");
+        btn3.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent arg0){
+                btn3.setText(startGame);
+                if(startGame.equalsIgnoreCase("X")){
+                    btn3.setForeground(Color.RED);
+                    b3 = 1;
+                    i++;
+                } else {
+                    btn3.setForeground(Color.BLUE);
+                    b3 = 0;
+                    i++;
+                }
+                choosePlayer();
+                winningGame();
+            }
+        });
+        btn3.setFont(new Font("Tahoma", Font.BOLD, 80));
+        panel_3.add(btn3, BorderLayout.CENTER);
+
     }
 }
