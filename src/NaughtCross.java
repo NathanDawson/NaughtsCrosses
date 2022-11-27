@@ -444,5 +444,53 @@ public class NaughtCross {
 		panel_14.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		panel.add(panel_14);
 		panel_14.setLayout(new BorderLayout(0, 0));
+
+        JButton btnReset = new JButton("RESET");
+        btnReset.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0){
+                btn1.setText(null);
+                btn2.setText(null);
+                btn3.setText(null);
+                btn4.setText(null);
+                btn5.setText(null);
+                btn6.setText(null);
+                btn7.setText(null);
+                btn8.setText(null);
+                btn9.setText(null);
+                 int b1 = 10;
+                 int b2 = 10;
+                 int b3 = 10;
+                 int b4 = 10;
+                 int b5 = 10;
+                 int b6 = 10;
+                 int b7 = 10;
+                 int b8 = 10;
+                 int b9 = 10;
+                 int i = 0;
+            }
+        });
+        btnReset.setFont(new Font("Tahoma", Font.BOLD, 22));
+		panel_14.add(btnReset, BorderLayout.CENTER);
+
+        JPanel panel_15 = new JPanel();
+		panel_15.setBorder(new LineBorder(new Color(0, 0, 0), 2));
+		panel.add(panel_15);
+		panel_15.setLayout(new BorderLayout(0, 0));
+		
+		JButton btnExit = new JButton("EXIT");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				frame = new JFrame("Exit");
+				if(JOptionPane.showConfirmDialog(frame, "Confirm You Want To Exit","Noughts & Crosses",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION)
+				{
+					System.exit(0);
+					
+				}
+				
+			}
+		});
+        btnExit.setFont(new Font("Tahoma", Font.BOLD, 22));
+		panel_15.add(btnExit, BorderLayout.CENTER);
     }
 }
